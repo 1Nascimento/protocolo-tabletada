@@ -1,0 +1,104 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3tfobffgfnu0"]
+
+[ext_resource type="Script" uid="uid://dborj1bcx2j15" path="res://scripts/interface/menu.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dnycsqiurr8fg" path="res://recursos/sprites/mapa/laboratorio.png" id="2"]
+
+[sub_resource type="StyleBoxFlat" id="Painel"]
+bg_color = Color(0.025, 0.065, 0.1, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.1, 0.7, 0.75, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="Fundo" type="TextureRect" parent="."]
+modulate = Color(0.3, 0.4, 0.5, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Centro" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Painel" type="PanelContainer" parent="Centro"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("Painel")
+
+[node name="Margem" type="MarginContainer" parent="Centro/Painel"]
+layout_mode = 2
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 48
+
+[node name="Conteudo" type="VBoxContainer" parent="Centro/Painel/Margem"]
+custom_minimum_size = Vector2(580, 0)
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="Identificador" type="Label" parent="Centro/Painel/Margem/Conteudo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 20
+text = "LAB / 07     •     FALHA DE CONTENÇÃO"
+horizontal_alignment = 1
+
+[node name="Titulo" type="Label" parent="Centro/Painel/Margem/Conteudo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "PROTOCOLO
+TABLETADA"
+horizontal_alignment = 1
+
+[node name="Descricao" type="Label" parent="Centro/Painel/Margem/Conteudo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Os aspiradores perderam o controle.
+Seu tablet virou a última linha de defesa.
+Derrote 50 robôs e recupere o laboratório."
+horizontal_alignment = 1
+
+[node name="Controles" type="Label" parent="Centro/Painel/Margem/Conteudo"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.8, 0.85, 1)
+theme_override_font_sizes/font_size = 19
+text = "WASD / SETAS   mover e mirar
+ESPAÇO / CLIQUE   dar uma tabletada"
+horizontal_alignment = 1
+
+[node name="Jogar" type="Button" parent="Centro/Painel/Margem/Conteudo"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "INICIAR TURNO"
+
+[node name="Sair" type="Button" parent="Centro/Painel/Margem/Conteudo"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "SAIR"

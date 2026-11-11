@@ -1,0 +1,1 @@
+Extraia TODO o ZIP. No Godot 4.6, clique em Importar e selecione project.godot nesta pasta. Aguarde os recursos e pressione F5. Nao abra apenas uma cena isolada.

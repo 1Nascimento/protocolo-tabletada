@@ -1,0 +1,130 @@
+[gd_resource type="SpriteFrames" load_steps=14 format=3 uid="uid://ccgqhd2qgknv0"]
+
+[ext_resource type="Texture2D" uid="uid://b1yd7nyfrkr1g" path="res://recursos/sprites/inimigos/aspirador/aspirador.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="frame_0_2"]
+atlas = ExtResource("1")
+region = Rect2(724, 82, 362, 280)
+
+[sub_resource type="AtlasTexture" id="frame_3_2"]
+atlas = ExtResource("1")
+region = Rect2(724, 1028, 362, 280)
+
+[sub_resource type="AtlasTexture" id="frame_2_2"]
+atlas = ExtResource("1")
+region = Rect2(724, 714, 362, 280)
+
+[sub_resource type="AtlasTexture" id="frame_1_2"]
+atlas = ExtResource("1")
+region = Rect2(724, 399, 362, 280)
+
+[sub_resource type="AtlasTexture" id="frame_0_0"]
+atlas = ExtResource("1")
+region = Rect2(0, 82, 362, 280)
+
+[sub_resource type="AtlasTexture" id="frame_0_1"]
+atlas = ExtResource("1")
+region = Rect2(362, 82, 362, 280)
+
+[sub_resource type="AtlasTexture" id="frame_3_0"]
+atlas = ExtResource("1")
+region = Rect2(0, 1028, 362, 280)
+
+[sub_resource type="AtlasTexture" id="frame_3_1"]
+atlas = ExtResource("1")
+region = Rect2(362, 1028, 362, 280)
+
+[sub_resource type="AtlasTexture" id="frame_2_0"]
+atlas = ExtResource("1")
+region = Rect2(0, 714, 362, 280)
+
+[sub_resource type="AtlasTexture" id="frame_2_1"]
+atlas = ExtResource("1")
+region = Rect2(362, 714, 362, 280)
+
+[sub_resource type="AtlasTexture" id="frame_1_0"]
+atlas = ExtResource("1")
+region = Rect2(0, 399, 362, 280)
+
+[sub_resource type="AtlasTexture" id="frame_1_1"]
+atlas = ExtResource("1")
+region = Rect2(362, 399, 362, 280)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("frame_0_2")
+}],
+"loop": false,
+"name": &"dano_baixo",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("frame_3_2")
+}],
+"loop": false,
+"name": &"dano_cima",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("frame_2_2")
+}],
+"loop": false,
+"name": &"dano_direita",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("frame_1_2")
+}],
+"loop": false,
+"name": &"dano_esquerda",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("frame_0_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("frame_0_1")
+}],
+"loop": true,
+"name": &"mover_baixo",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("frame_3_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("frame_3_1")
+}],
+"loop": true,
+"name": &"mover_cima",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("frame_2_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("frame_2_1")
+}],
+"loop": true,
+"name": &"mover_direita",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("frame_1_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("frame_1_1")
+}],
+"loop": true,
+"name": &"mover_esquerda",
+"speed": 7.0
+}]

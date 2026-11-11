@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/personagens/jogador.gd" id="1"]
+[ext_resource type="SpriteFrames" path="res://recursos/animacoes/jogador.tres" id="2"]
+
+[sub_resource type="CircleShape2D" id="Corpo"]
+radius = 12.0
+
+[node name="Jogador" type="CharacterBody2D"]
+texture_filter = 1
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("1")
+
+[node name="Sombra" type="Polygon2D" parent="."]
+color = Color(0.01, 0.02, 0.03, 0.38)
+polygon = PackedVector2Array(-13, 0, -9, -4, 0, -5, 9, -4, 13, 0, 9, 4, 0, 5, -9, 4)
+
+[node name="Visual" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(0, -35)
+scale = Vector2(0.26, 0.26)
+sprite_frames = ExtResource("2")
+animation = &"idle_baixo"
+autoplay = "idle_baixo"
+
+[node name="Colisao" type="CollisionShape2D" parent="."]
+shape = SubResource("Corpo")
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(0, -24)
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 1672
+limit_bottom = 941
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+

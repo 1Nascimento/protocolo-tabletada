@@ -1,0 +1,198 @@
+[gd_scene load_steps=23 format=3]
+
+[ext_resource type="Texture2D" path="res://recursos/sprites/mapa/laboratorio.png" id="1"]
+
+[sub_resource type="RectangleShape2D" id="Mesa"]
+size = Vector2(306, 158)
+
+[sub_resource type="RectangleShape2D" id="ParedeH"]
+size = Vector2(1580, 40)
+
+[sub_resource type="RectangleShape2D" id="ServidorCentral"]
+size = Vector2(180, 201)
+
+[sub_resource type="RectangleShape2D" id="CaixaSuperiorEsquerda"]
+size = Vector2(59, 75)
+
+[sub_resource type="RectangleShape2D" id="CaixaSuperiorDireita"]
+size = Vector2(56, 75)
+
+[sub_resource type="RectangleShape2D" id="CaixaLateralEsquerdaAlta"]
+size = Vector2(46, 74)
+
+[sub_resource type="RectangleShape2D" id="CaixaLateralEsquerdaBaixa"]
+size = Vector2(36, 59)
+
+[sub_resource type="RectangleShape2D" id="CaixaLateralDireitaAlta"]
+size = Vector2(38, 55)
+
+[sub_resource type="RectangleShape2D" id="CaixaLateralDireitaMedia"]
+size = Vector2(40, 56)
+
+[sub_resource type="RectangleShape2D" id="CaixaLateralDireitaBaixa"]
+size = Vector2(46, 64)
+
+[sub_resource type="RectangleShape2D" id="CaixaCantoInferiorEsquerdo"]
+size = Vector2(50, 63)
+
+[sub_resource type="RectangleShape2D" id="CaixaInferiorCentralAlta"]
+size = Vector2(54, 80)
+
+[sub_resource type="RectangleShape2D" id="CaixaInferiorCentralBaixa"]
+size = Vector2(42, 56)
+
+[sub_resource type="RectangleShape2D" id="CaixaInferiorDireita"]
+size = Vector2(43, 55)
+
+[sub_resource type="RectangleShape2D" id="Terminal"]
+size = Vector2(72, 87)
+
+[sub_resource type="RectangleShape2D" id="CaixaMedica"]
+size = Vector2(66, 83)
+
+[sub_resource type="RectangleShape2D" id="VasoSuperiorEsquerdo"]
+size = Vector2(68, 97)
+
+[sub_resource type="RectangleShape2D" id="VasoSuperiorDireito"]
+size = Vector2(66, 97)
+
+[sub_resource type="RectangleShape2D" id="VasoCantoSuperiorDireito"]
+size = Vector2(68, 113)
+
+[sub_resource type="RectangleShape2D" id="VasoInferiorEsquerdo"]
+size = Vector2(68, 107)
+
+[sub_resource type="RectangleShape2D" id="VasoInferiorDireito"]
+size = Vector2(68, 106)
+
+[node name="Laboratorio" type="Node2D"]
+texture_filter = 1
+
+[node name="Mapa" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+centered = false
+
+[node name="Mesas" type="StaticBody2D" parent="."]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Mecanica" type="CollisionShape2D" parent="Mesas"]
+position = Vector2(360, 276)
+shape = SubResource("Mesa")
+
+[node name="Desenvolvimento" type="CollisionShape2D" parent="Mesas"]
+position = Vector2(1312, 276)
+shape = SubResource("Mesa")
+
+[node name="Materiais" type="CollisionShape2D" parent="Mesas"]
+position = Vector2(360, 632)
+shape = SubResource("Mesa")
+
+[node name="Testes" type="CollisionShape2D" parent="Mesas"]
+position = Vector2(1312, 632)
+shape = SubResource("Mesa")
+
+[node name="Limites" type="StaticBody2D" parent="."]
+collision_layer = 1
+collision_mask = 0
+
+[node name="Superior" type="CollisionShape2D" parent="Limites"]
+position = Vector2(836, 33)
+shape = SubResource("ParedeH")
+
+[node name="Inferior" type="CollisionShape2D" parent="Limites"]
+position = Vector2(836, 885)
+shape = SubResource("ParedeH")
+
+[node name="Esquerda" type="CollisionShape2D" parent="Limites"]
+position = Vector2(33, 469)
+rotation = 1.5707963
+scale = Vector2(0.53, 1)
+shape = SubResource("ParedeH")
+
+[node name="Direita" type="CollisionShape2D" parent="Limites"]
+position = Vector2(1637, 469)
+rotation = 1.5707963
+scale = Vector2(0.53, 1)
+shape = SubResource("ParedeH")
+
+
+[node name="Obstaculos" type="StaticBody2D" parent="."]
+collision_layer = 1
+collision_mask = 0
+
+[node name="ServidorCentral" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(836.0, 446.5)
+shape = SubResource("ServidorCentral")
+
+[node name="CaixaSuperiorEsquerda" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(488.5, 92.5)
+shape = SubResource("CaixaSuperiorEsquerda")
+
+[node name="CaixaSuperiorDireita" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(1181.0, 92.5)
+shape = SubResource("CaixaSuperiorDireita")
+
+[node name="CaixaLateralEsquerdaAlta" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(85.0, 236.0)
+shape = SubResource("CaixaLateralEsquerdaAlta")
+
+[node name="CaixaLateralEsquerdaBaixa" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(80.0, 676.5)
+shape = SubResource("CaixaLateralEsquerdaBaixa")
+
+[node name="CaixaLateralDireitaAlta" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(1587.0, 192.5)
+shape = SubResource("CaixaLateralDireitaAlta")
+
+[node name="CaixaLateralDireitaMedia" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(1586.0, 254.0)
+shape = SubResource("CaixaLateralDireitaMedia")
+
+[node name="CaixaLateralDireitaBaixa" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(1581.0, 700.0)
+shape = SubResource("CaixaLateralDireitaBaixa")
+
+[node name="CaixaCantoInferiorEsquerdo" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(174.0, 812.5)
+shape = SubResource("CaixaCantoInferiorEsquerdo")
+
+[node name="CaixaInferiorCentralAlta" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(563.0, 738.0)
+shape = SubResource("CaixaInferiorCentralAlta")
+
+[node name="CaixaInferiorCentralBaixa" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(517.0, 770.0)
+shape = SubResource("CaixaInferiorCentralBaixa")
+
+[node name="CaixaInferiorDireita" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(1156.5, 770.5)
+shape = SubResource("CaixaInferiorDireita")
+
+[node name="Terminal" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(1075.0, 540.5)
+shape = SubResource("Terminal")
+
+[node name="CaixaMedica" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(1086.0, 736.5)
+shape = SubResource("CaixaMedica")
+
+[node name="VasoSuperiorEsquerdo" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(562.0, 97.5)
+shape = SubResource("VasoSuperiorEsquerdo")
+
+[node name="VasoSuperiorDireito" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(1109.0, 96.5)
+shape = SubResource("VasoSuperiorDireito")
+
+[node name="VasoCantoSuperiorDireito" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(1564.0, 90.5)
+shape = SubResource("VasoCantoSuperiorDireito")
+
+[node name="VasoInferiorEsquerdo" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(98.0, 783.5)
+shape = SubResource("VasoInferiorEsquerdo")
+
+[node name="VasoInferiorDireito" type="CollisionShape2D" parent="Obstaculos"]
+position = Vector2(1568.0, 785.0)
+shape = SubResource("VasoInferiorDireito")

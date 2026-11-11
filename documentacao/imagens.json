@@ -1,0 +1,68 @@
+[
+  {
+    "Arquivo": "esteira.png",
+    "Largura": 2172,
+    "Altura": 724,
+    "AlphaCanto": 0
+  },
+  {
+    "Arquivo": "marcador.png",
+    "Largura": 1536,
+    "Altura": 1024,
+    "AlphaCanto": 1
+  },
+  {
+    "Arquivo": "parede.png",
+    "Largura": 2172,
+    "Altura": 724,
+    "AlphaCanto": 0
+  },
+  {
+    "Arquivo": "piso.png",
+    "Largura": 1254,
+    "Altura": 1254,
+    "AlphaCanto": 255
+  },
+  {
+    "Arquivo": "caixa.png",
+    "Largura": 1536,
+    "Altura": 1024,
+    "AlphaCanto": 0
+  },
+  {
+    "Arquivo": "planta.png",
+    "Largura": 1536,
+    "Altura": 1024,
+    "AlphaCanto": 0
+  },
+  {
+    "Arquivo": "kit_medico.png",
+    "Largura": 1536,
+    "Altura": 1024,
+    "AlphaCanto": 0
+  },
+  {
+    "Arquivo": "laboratorio.png",
+    "Largura": 1672,
+    "Altura": 941,
+    "AlphaCanto": 255
+  },
+  {
+    "Arquivo": "mesa.png",
+    "Largura": 1774,
+    "Altura": 887,
+    "AlphaCanto": 0
+  },
+  {
+    "Arquivo": "servidor.png",
+    "Largura": 1322,
+    "Altura": 1190,
+    "AlphaCanto": 0
+  },
+  {
+    "Arquivo": "terminal.png",
+    "Largura": 1536,
+    "Altura": 1024,
+    "AlphaCanto": 0
+  }
+]
