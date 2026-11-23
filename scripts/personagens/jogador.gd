@@ -1,4 +1,4 @@
-# Personagem, golpe e vida preparados com assistência de OpenAI Codex.
+# Origem do codigo: desenvolvido com ajuda do ChatGPT/OpenAI Codex (movimento, animacoes, ataque e vida).
 extends CharacterBody2D
 
 signal health_changed(value: int)

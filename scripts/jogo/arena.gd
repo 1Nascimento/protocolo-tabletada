@@ -1,4 +1,4 @@
-# Arena, navegação e objetivo criados com assistência de OpenAI Codex.
+# Origem do codigo: desenvolvido com ajuda do ChatGPT/OpenAI Codex (arena, inimigos, navegacao e fim de jogo).
 extends Node2D
 
 const ENEMY = preload("res://cenas/inimigos/aspirador.tscn")

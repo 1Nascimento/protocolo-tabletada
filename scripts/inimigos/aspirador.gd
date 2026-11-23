@@ -1,4 +1,4 @@
-# Origem: implementação com assistência de OpenAI Codex.
+# Origem do codigo: desenvolvido com ajuda do ChatGPT/OpenAI Codex (perseguicao, estados, ataque e dano).
 extends CharacterBody2D
 
 enum State { CHASING, STUNNED, ATTACKING, DEAD, STOPPED }

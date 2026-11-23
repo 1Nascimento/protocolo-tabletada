@@ -1,4 +1,4 @@
-# Origem: implementação com assistência de OpenAI Codex.
+# Origem do codigo: desenvolvido com ajuda do ChatGPT/OpenAI Codex (menu e botoes).
 extends Control
 
 func _ready() -> void:
